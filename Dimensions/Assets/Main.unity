@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentDimension: 0
+  DimensionChange: {fileID: 8300000, guid: 5af366623014444bea8b36e6bb1a6384, type: 3}
   Normal: {fileID: 11400000, guid: 97150cde7399a40b48507ca095c6a299, type: 2}
   Red: {fileID: 11400000, guid: 7be23731869e84429b4d8f510e23ae2f, type: 2}
   Green: {fileID: 11400000, guid: 174a90b191137468989dea3d6b59c22c, type: 2}
