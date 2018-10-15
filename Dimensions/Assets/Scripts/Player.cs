@@ -27,25 +27,25 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Exclaim))
         {
             CurrentDimension = Dimensions.Purple;
             Me.profile = Purple;
             AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.At))
         {
             CurrentDimension = Dimensions.Red;
             Me.profile = Red;
             AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Hash))
         {
             CurrentDimension = Dimensions.Green;
             Me.profile = Green;
             AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Dollar))
         {
             CurrentDimension = Dimensions.Yellow;
             Me.profile = Yellow;
