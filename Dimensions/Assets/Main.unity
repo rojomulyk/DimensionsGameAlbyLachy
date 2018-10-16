@@ -581,6 +581,11 @@ Transform:
   m_Father: {fileID: 877813107}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &446296429 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1786143516490668, guid: 08a7950a645e44eafb87c356b5de4203,
+    type: 2}
+  m_PrefabInternal: {fileID: 574841122}
 --- !u!1 &506627754
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +725,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114243224949597772, guid: 08a7950a645e44eafb87c356b5de4203,
+        type: 2}
+      propertyPath: Canswitch
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08a7950a645e44eafb87c356b5de4203, type: 2}
   m_IsPrefabParent: 0
@@ -829,11 +839,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 574841122}
   m_Script: {fileID: 11500000, guid: 0edb16a5ca5c347be9b4b37704379425, type: 3}
---- !u!54 &775899627 stripped
-Rigidbody:
-  m_PrefabParentObject: {fileID: 54307278403181216, guid: 08a7950a645e44eafb87c356b5de4203,
-    type: 2}
-  m_PrefabInternal: {fileID: 574841122}
 --- !u!1 &877813106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1556,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 53033dceded821747b43f88130bc7a53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1614,7 +1619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17658794ab5f5b441ab63c1d51087304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 775899627}
+  Player: {fileID: 446296429}
+  player: {fileID: 772706222}
 --- !u!1 &1722260883
 GameObject:
   m_ObjectHideFlags: 0

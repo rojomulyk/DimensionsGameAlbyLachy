@@ -16,7 +16,10 @@ public class Player : MonoBehaviour {
     public PostProcessingProfile Yellow;
     public PostProcessingProfile Black;
     public PostProcessingProfile Purple;
-    public Player Canswitch;
+    public bool Canswitch;
+    private bool Changing;
+
+    
 
     PostProcessingBehaviour Me;
 
@@ -28,43 +31,60 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Exclaim))
+
+        if (Canswitch)
         {
-            CurrentDimension = Dimensions.Purple;
-            Me.profile = Purple;
-            AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+            if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Exclaim))
+            {
+               CurrentDimension = Dimensions.Purple;
+                Me.profile = Purple;
+                AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.At))
+            {
+                CurrentDimension = Dimensions.Red;
+                Me.profile = Red;
+                AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Hash))
+            {
+                CurrentDimension = Dimensions.Green;
+               Me.profile = Green;
+                AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+             }
+              if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Dollar))
+              {
+                  CurrentDimension = Dimensions.Yellow;
+                  Me.profile = Yellow;
+                 AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+             }
+             if (Input.GetKeyDown(KeyCode.Alpha5))
+              {
+                  CurrentDimension = Dimensions.Black;
+                  Me.profile = Black;
+                  AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+               }
+               if (Input.GetKeyDown(KeyCode.Tab))
+               {
+                 CurrentDimension = Dimensions.Normal;
+                  Me.profile = Normal;
+                  AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+              }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.At))
+
+        if (Canswitch == false)
         {
-            CurrentDimension = Dimensions.Red;
-            Me.profile = Red;
-            AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
+            CurrentDimension = Dimensions.Normal;
+            Me.profile = Normal;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Hash))
-        {
-            CurrentDimension = Dimensions.Green;
-            Me.profile = Green;
-            AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Dollar))
-        {
-            CurrentDimension = Dimensions.Yellow;
-            Me.profile = Yellow;
-            AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            CurrentDimension = Dimensions.Black;
-            Me.profile = Black;
-            AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
-        }
-        if (Input.GetKeyDown(KeyCode.Tab))
+
+        if (Changing)
         {
             CurrentDimension = Dimensions.Normal;
             Me.profile = Normal;
             AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
         }
+		
 
         if(CurrentDimension != Dimensions.Normal)
         {

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class CancelZone : MonoBehaviour {
 
-    public Rigidbody Player;
+    public GameObject Player;
+    public Player player;
 
     void OnTriggerStay(Collider col)
     {
         if (col.gameObject == Player)
         {
-            Debug.Log("hi");
+            player.Canswitch = false;
         }
+       
+    }
 
+    void OnTriggerExit(Collider coll)
+    {
+        player.Canswitch = true;
     }
 
 }
