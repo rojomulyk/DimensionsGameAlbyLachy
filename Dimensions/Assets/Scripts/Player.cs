@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     public Dimensions CurrentDimension;
 
     public AudioClip DimensionChange;
+    public GameObject DimensionSound;
 
     public PostProcessingProfile Normal;
     public PostProcessingProfile Red;
@@ -63,5 +64,15 @@ public class Player : MonoBehaviour {
             Me.profile = Normal;
             AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
         }
+
+        if(CurrentDimension != Dimensions.Normal)
+        {
+            DimensionSound.SetActive(true);
+        }
+        else
+        {
+            DimensionSound.SetActive(false);
+        }
+
 	}
 }
