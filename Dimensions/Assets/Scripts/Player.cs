@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
     public PostProcessingProfile Yellow;
     public PostProcessingProfile Black;
     public PostProcessingProfile Purple;
+    public Player Canswitch;
 
     PostProcessingBehaviour Me;
 
