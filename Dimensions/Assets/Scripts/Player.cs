@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
 
     public AudioClip DimensionChange;
     public GameObject DimensionSound;
+    public AudioClip Cancel;
 
     public PostProcessingProfile Normal;
     public PostProcessingProfile Red;
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour {
                }
                if (Input.GetKeyDown(KeyCode.Tab))
                {
-                 CurrentDimension = Dimensions.Normal;
+                  CurrentDimension = Dimensions.Normal;
                   Me.profile = Normal;
                   AudioSource.PlayClipAtPoint(DimensionChange, transform.position);
               }
@@ -96,4 +97,9 @@ public class Player : MonoBehaviour {
         }
 
 	}
+
+    public void CancelNoise()
+    {
+        AudioSource.PlayClipAtPoint(Cancel, transform.position);
+    }
 }

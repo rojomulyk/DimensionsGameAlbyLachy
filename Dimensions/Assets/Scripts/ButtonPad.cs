@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ButtonPad : MonoBehaviour {
 
+    public Dimensions dimension;
+
     public Material On;
     public Material Off;
 
@@ -11,20 +13,29 @@ public class ButtonPad : MonoBehaviour {
     public AudioClip ClipOn;
     public AudioClip ClipOff;
 
+    public Player Player;
+
     public Collider Base;
 
     bool Pressed;
 
 	void Start () {
-		
+        Player = GameObject.Find("Player").GetComponent<Player>();
 	}
 	
 	
 	void Update () {
 
-        if(Pressed == true)
+        if (Player.CurrentDimension == dimension)
         {
-            gameObject.GetComponent<Renderer>().material = On;
+            if (Pressed == true)
+            {
+                gameObject.GetComponent<Renderer>().material = On;
+            }
+            else
+            {
+                gameObject.GetComponent<Renderer>().material = Off;
+            }
         }
         else
         {
@@ -36,9 +47,12 @@ public class ButtonPad : MonoBehaviour {
 	{
         if(other != Base)
         {
-            Pressed = true;
-            Source.clip = ClipOn;
-            Source.Play();
+            if (Player.CurrentDimension == dimension)
+            {
+                Pressed = true;
+                Source.clip = ClipOn;
+                Source.Play();
+            }
         }
 	}
 
