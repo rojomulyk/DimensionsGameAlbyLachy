@@ -10,12 +10,12 @@ public class Launcher : MonoBehaviour {
 
     private void Start()
     {
-        Playerrb = GetComponent<Rigidbody>();
+        
     }
 
-    private void FixedUpdate()
+    void OnTriggerEnter(Collider col)
     {
-        Playerrb.AddForce(0, 60, 10 * Time.deltaTime);
+        Playerrb.AddForce(LauncherForce, LauncherForce + 250, 0 * Time.deltaTime);
     }
 
 }

@@ -12,6 +12,8 @@ public class ButtonPad : MonoBehaviour {
     public AudioSource Source;
     public AudioClip ClipOn;
     public AudioClip ClipOff;
+    public Rigidbody Target;
+    public bool Activate;
 
     public Player Player;
 
@@ -52,6 +54,7 @@ public class ButtonPad : MonoBehaviour {
                 Pressed = true;
                 Source.clip = ClipOn;
                 Source.Play();
+                Activate = true;
             }
         }
 	}
@@ -63,6 +66,7 @@ public class ButtonPad : MonoBehaviour {
             Pressed = false;
             Source.clip = ClipOff;
             Source.Play();
+            Activate = false;
         }
     }
 
