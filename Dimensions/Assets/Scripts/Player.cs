@@ -19,8 +19,9 @@ public class Player : MonoBehaviour {
     public PostProcessingProfile Purple;
     public bool Canswitch;
     private bool Changing;
+    public float health = 1000;
 
-    
+
 
     PostProcessingBehaviour Me;
 

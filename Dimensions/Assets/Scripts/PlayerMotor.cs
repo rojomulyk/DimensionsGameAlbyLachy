@@ -19,11 +19,6 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 ThrusterForce = Vector3.zero;
     private Rigidbody rb;
 
-
-
-
-
-
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();

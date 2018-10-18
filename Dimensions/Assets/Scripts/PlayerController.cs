@@ -12,9 +12,10 @@ public class PlayerController : MonoBehaviour {
 
 
     public bool CanRun = true;
+    public bool Frozen;
 
 
-   
+
 
     private PlayerMotor motor;
 
