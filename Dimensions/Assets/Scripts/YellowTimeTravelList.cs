@@ -16,7 +16,7 @@ public class YellowTimeTravelList : MonoBehaviour {
 
     public void Start()
     {
-        A = true;
+        A = false;
         B = false;
         D = true;
     }
@@ -28,6 +28,13 @@ public class YellowTimeTravelList : MonoBehaviour {
 
     void Update()
     {
+        if (B == false)
+        {
+            if (Input.GetKeyUp("i"))
+            {
+                A = true;
+            }
+        }
         if (A == true)
         {
             StartCoroutine(Wait());
@@ -46,6 +53,7 @@ public class YellowTimeTravelList : MonoBehaviour {
                 if (Input.GetKeyDown("u"))
                 {
                     C = true;
+                    next = next + 1;
                     StartCoroutine(Wait());
                 }
             }
@@ -65,8 +73,7 @@ public class YellowTimeTravelList : MonoBehaviour {
         if (C)
         {
             C = false;            
-            PrevSelf.transform.position = vecs[next];
-            next = next + 1;
+            PrevSelf.transform.position = vecs[next];                        
             yield return new WaitForSeconds(0.07F);
             vecs.Remove(vecs[next]);
             C = true;
