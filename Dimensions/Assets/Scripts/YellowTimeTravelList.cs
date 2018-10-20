@@ -8,10 +8,17 @@ public class YellowTimeTravelList : MonoBehaviour {
     public Vector3 Vector;
     public List<Vector3> vecs = new List<Vector3>();
     public bool A = false;
+    public bool B = false;
+    public GameObject PrevSelf;
+    public int next = 0;
+    public bool C;
+    public bool D;
 
     public void Start()
     {
-        A = true;       
+        A = true;
+        B = false;
+        D = true;
     }
 
     private void FixedUpdate()
@@ -25,16 +32,45 @@ public class YellowTimeTravelList : MonoBehaviour {
         {
             StartCoroutine(Wait());
         }
-        if (vecs.Count > (100F)) {
-            A = false;
+        if (next > 97)
+        {
+            D = false;
         }
+        if (vecs.Count > (98F)) {
+            B = true;
+        }
+        if (D)
+        {
+            if (B)
+            {
+                if (Input.GetKeyDown("u"))
+                {
+                    C = true;
+                    StartCoroutine(Wait());
+                }
+            }
+        }  
     }
 
     public IEnumerator Wait()
     {
-        A = false;
-        yield return new WaitForSeconds(0.1F);
-        vecs.Add(Vector);
-        A = true;       
+        if (B == false)
+        {
+            A = false;
+            yield return new WaitForSeconds(0.07F);
+            vecs.Add(Vector);
+            A = true;
+        }
+
+        if (C)
+        {
+            C = false;            
+            PrevSelf.transform.position = vecs[next];
+            next = next + 1;
+            yield return new WaitForSeconds(0.07F);
+            vecs.Remove(vecs[next]);
+            C = true;
+        }
+
     }
 }
