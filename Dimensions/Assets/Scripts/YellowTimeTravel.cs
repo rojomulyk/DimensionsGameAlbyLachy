@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class YellowTimeTravel : MonoBehaviour {
 
-    public class Prevpos
-    {
-        public Vector3 Loc;       
+    public YellowTimeTravelList Yellow;
 
-        public Prevpos(Vector3 NewLoc)
-        {
-            Loc = NewLoc;
+    void OnCollisionEnter(Collision collision)
+    {
+        if
+
+        }
+
         }
     }
 
+    void OnCollisionStay(Collision collision)
+    {
+        if (Yellow.numcount)
+        {
+            Debug.Log("sad"); 
+        }
+    }
 }

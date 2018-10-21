@@ -817,6 +817,13 @@ MonoBehaviour:
   PrevSelf: {fileID: 1347419149}
   next: 0
   C: 0
+  D: 0
+  cols: 
+  steps: 0
+  recording: 0
+  replay: 0
+  replaying: 0
+  numcount: 0
 --- !u!54 &446296433 stripped
 Rigidbody:
   m_PrefabParentObject: {fileID: 54307278403181216, guid: 08a7950a645e44eafb87c356b5de4203,
@@ -1790,6 +1797,7 @@ GameObject:
   - component: {fileID: 1347419152}
   - component: {fileID: 1347419151}
   - component: {fileID: 1347419150}
+  - component: {fileID: 1347419154}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1864,6 +1872,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347419154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347419149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c69feb8af5b8d47835bbb9183ecb9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Yellow: {fileID: 446296431}
 --- !u!1 &1349598777
 GameObject:
   m_ObjectHideFlags: 0

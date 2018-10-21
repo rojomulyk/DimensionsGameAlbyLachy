@@ -13,12 +13,19 @@ public class YellowTimeTravelList : MonoBehaviour {
     public int next = 0;
     public bool C;
     public bool D;
+    public List<int> cols = new List<int>();
+    public int steps;
+    public bool recording;
+    public int replay;
+    public bool replaying;
+    public bool numcount;
 
     public void Start()
     {
         A = false;
         B = false;
         D = true;
+        recording = false;
     }
 
     private void FixedUpdate()
@@ -27,12 +34,13 @@ public class YellowTimeTravelList : MonoBehaviour {
     }
 
     void Update()
-    {
+    {             
         if (B == false)
         {
             if (Input.GetKeyUp("i"))
             {
                 A = true;
+                recording = true;
             }
         }
         if (A == true)
@@ -45,6 +53,7 @@ public class YellowTimeTravelList : MonoBehaviour {
         }
         if (vecs.Count > (98F)) {
             B = true;
+            recording = false;
         }
         if (D)
         {
@@ -55,6 +64,7 @@ public class YellowTimeTravelList : MonoBehaviour {
                     C = true;
                     next = next + 1;
                     StartCoroutine(Wait());
+                    replaying = true;
                 }
             }
         }  
@@ -67,17 +77,35 @@ public class YellowTimeTravelList : MonoBehaviour {
             A = false;
             yield return new WaitForSeconds(0.07F);
             vecs.Add(Vector);
+            steps = (steps + (1));
             A = true;
         }
 
         if (C)
         {
             C = false;            
-            PrevSelf.transform.position = vecs[next];                        
+            PrevSelf.transform.position = vecs[next];
+            replay = (replay + (1));
             yield return new WaitForSeconds(0.07F);
             vecs.Remove(vecs[next]);
             C = true;
         }
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (recording)
+        {
+            cols.Add(steps);
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (recording)
+        {
+            cols.Add(steps);
+        }
+    }
+
 }
