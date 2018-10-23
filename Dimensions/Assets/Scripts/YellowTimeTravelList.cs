@@ -75,7 +75,7 @@ public class YellowTimeTravelList : MonoBehaviour {
         if (B == false)
         {
             A = false;
-            yield return new WaitForSeconds(0.07F);
+            yield return new WaitForSeconds(0.07f);
             vecs.Add(Vector);
             steps = (steps + (1));
             A = true;
@@ -86,7 +86,7 @@ public class YellowTimeTravelList : MonoBehaviour {
             C = false;            
             PrevSelf.transform.position = vecs[next];
             replay = (replay + (1));
-            yield return new WaitForSeconds(0.07F);
+            yield return new WaitForSeconds(0.07f);
             vecs.Remove(vecs[next]);
             C = true;
         }
@@ -99,13 +99,5 @@ public class YellowTimeTravelList : MonoBehaviour {
         {
             cols.Add(steps);
         }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (recording)
-        {
-            cols.Add(steps);
-        }
-    }
-
+    } 
 }

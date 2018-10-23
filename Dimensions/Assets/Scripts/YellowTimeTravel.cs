@@ -5,21 +5,33 @@ using UnityEngine;
 public class YellowTimeTravel : MonoBehaviour {
 
     public YellowTimeTravelList Yellow;
+    public int colsSteps = -1;
+    public int colscount;
+    public int collides;
+    public int hits;
+    public int colstimes = 0;
 
     void OnCollisionEnter(Collision collision)
     {
-        if
+        colsSteps = (colsSteps + (1));
 
-        }
+            if (collides != colsSteps)
+            {
+                Debug.Log("apples");
+            }
 
-        }
     }
 
-    void OnCollisionStay(Collision collision)
+    public void Update()
     {
-        if (Yellow.numcount)
+        colscount = (Yellow.cols.Count);
+
+        if (Yellow.cols[colstimes] == Yellow.replay)
         {
-            Debug.Log("sad"); 
+            colstimes = (colstimes + (1));
+            collides = (collides + (1));
         }
+        
     }
+    
 }
