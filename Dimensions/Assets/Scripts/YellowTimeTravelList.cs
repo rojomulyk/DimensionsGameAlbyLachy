@@ -19,6 +19,7 @@ public class YellowTimeTravelList : MonoBehaviour {
     public int replay;
     public bool replaying;
     public bool numcount;
+    public YellowTimeTravel Yellow;
 
     public void Start()
     {

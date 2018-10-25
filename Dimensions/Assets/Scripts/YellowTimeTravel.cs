@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class YellowTimeTravel : MonoBehaviour {
+public class YellowTimeTravel : MonoBehaviour
+{
 
     public YellowTimeTravelList Yellow;
-    public int colsSteps = -1;
+    public int colsSteps = 0;
     public int colscount;
-    public int collides;
+    public int collides = 0;
     public int hits;
     public int colstimes = 0;
 
@@ -15,10 +16,10 @@ public class YellowTimeTravel : MonoBehaviour {
     {
         colsSteps = (colsSteps + (1));
 
-            if (collides != colsSteps)
-            {
-                Debug.Log("apples");
-            }
+        if (Yellow.replay == (1))
+        {
+            collides = (collides + (1));
+        }
 
     }
 
@@ -30,8 +31,17 @@ public class YellowTimeTravel : MonoBehaviour {
         {
             colstimes = (colstimes + (1));
             collides = (collides + (1));
+
+
+            if (collides != colsSteps)
+            {
+                StartCoroutine (Seconds());
+            }
+
         }
-        
+
     }
-    
+
+    public IEnumerator Seconds();
+
 }
