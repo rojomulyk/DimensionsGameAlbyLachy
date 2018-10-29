@@ -143,9 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04945a8cc830f343adaa12365b4951b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LauncherForce: 2000
-  Players: {fileID: 446296429}
-  Playerrb: {fileID: 446296433}
+  LauncherForce: 0
+  Players: {fileID: 0}
+  Playerrb: {fileID: 0}
 --- !u!23 &115325558
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -410,10 +410,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34313fe60bfc74560a3c99ba7820409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDimension: 3
-  Player: {fileID: 772706222}
-  collider: {fileID: 271532438}
-  renderer: {fileID: 271532437}
+  MyDimension: 0
+  Player: {fileID: 0}
+  collider: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!23 &271532437
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf874b58e88160742a47299358a68500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonPad: {fileID: 1909424593}
+  ButtonPad: {fileID: 0}
 --- !u!54 &302489516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyDimension: 3
-  Player: {fileID: 772706222}
+  Player: {fileID: 446296430}
   collider: {fileID: 335897596}
   renderer: {fileID: 335897595}
 --- !u!1 &419512168
@@ -723,10 +723,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34313fe60bfc74560a3c99ba7820409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDimension: 5
-  Player: {fileID: 772706222}
-  collider: {fileID: 419512171}
-  renderer: {fileID: 419512170}
+  MyDimension: 0
+  Player: {fileID: 0}
+  collider: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!23 &419512170
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -798,6 +798,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1786143516490668, guid: 08a7950a645e44eafb87c356b5de4203,
     type: 2}
   m_PrefabInternal: {fileID: 574841122}
+--- !u!114 &446296430 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114243224949597772, guid: 08a7950a645e44eafb87c356b5de4203,
+    type: 2}
+  m_PrefabInternal: {fileID: 574841122}
+  m_Script: {fileID: 11500000, guid: 0edb16a5ca5c347be9b4b37704379425, type: 3}
 --- !u!114 &446296431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,11 +830,7 @@ MonoBehaviour:
   replay: 0
   replaying: 0
   numcount: 0
---- !u!54 &446296433 stripped
-Rigidbody:
-  m_PrefabParentObject: {fileID: 54307278403181216, guid: 08a7950a645e44eafb87c356b5de4203,
-    type: 2}
-  m_PrefabInternal: {fileID: 574841122}
+  jumps: 
 --- !u!1 &476175159
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,9 +945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04945a8cc830f343adaa12365b4951b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LauncherForce: 500
-  Players: {fileID: 446296429}
-  Playerrb: {fileID: 446296433}
+  LauncherForce: 0
+  Players: {fileID: 0}
+  Playerrb: {fileID: 0}
 --- !u!23 &493457207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1042,10 +1044,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34313fe60bfc74560a3c99ba7820409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDimension: 4
-  Player: {fileID: 772706222}
-  collider: {fileID: 506627757}
-  renderer: {fileID: 506627756}
+  MyDimension: 0
+  Player: {fileID: 0}
+  collider: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!23 &506627756
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1204,10 +1206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34313fe60bfc74560a3c99ba7820409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDimension: 1
-  Player: {fileID: 772706222}
-  collider: {fileID: 647184722}
-  renderer: {fileID: 647184721}
+  MyDimension: 0
+  Player: {fileID: 0}
+  collider: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!23 &647184721
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1274,12 +1276,6 @@ Transform:
   m_Father: {fileID: 877813107}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &772706222 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114243224949597772, guid: 08a7950a645e44eafb87c356b5de4203,
-    type: 2}
-  m_PrefabInternal: {fileID: 574841122}
-  m_Script: {fileID: 11500000, guid: 0edb16a5ca5c347be9b4b37704379425, type: 3}
 --- !u!1 &877813106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,10 +1349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34313fe60bfc74560a3c99ba7820409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDimension: 4
-  Player: {fileID: 772706222}
-  collider: {fileID: 913949338}
-  renderer: {fileID: 913949337}
+  MyDimension: 0
+  Player: {fileID: 0}
+  collider: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!23 &913949337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1454,7 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyDimension: 4
-  Player: {fileID: 772706222}
+  Player: {fileID: 446296430}
   collider: {fileID: 972190886}
   renderer: {fileID: 972190885}
 --- !u!23 &972190885
@@ -1553,10 +1549,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34313fe60bfc74560a3c99ba7820409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDimension: 2
-  Player: {fileID: 772706222}
-  collider: {fileID: 1281015770}
-  renderer: {fileID: 1281015769}
+  MyDimension: 0
+  Player: {fileID: 0}
+  collider: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!23 &1281015769
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1855,9 +1851,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.198789
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: -0.09329307, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1347419152
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1895,6 +1891,11 @@ MonoBehaviour:
   collides: 0
   hits: 0
   colstimes: 0
+  colsstay: 0
+  test: 0
+  jump: 0
+  leaves: 0
+  colstimes20: 0
 --- !u!54 &1347419155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2283,8 +2284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17658794ab5f5b441ab63c1d51087304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 446296429}
-  player: {fileID: 772706222}
+  Player: {fileID: 0}
+  player: {fileID: 0}
 --- !u!199 &1716808423
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -5730,10 +5731,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34313fe60bfc74560a3c99ba7820409f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDimension: 1
-  Player: {fileID: 772706222}
-  collider: {fileID: 1722260886}
-  renderer: {fileID: 1722260885}
+  MyDimension: 0
+  Player: {fileID: 0}
+  collider: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!23 &1722260885
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5830,8 +5831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4461207f2172454197e97f1b354db53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Freezer: {fileID: 1783613118}
-  Player: {fileID: 772706222}
+  Freezer: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!23 &1783613120
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6079,7 +6080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyDimension: 1
-  Player: {fileID: 772706222}
+  Player: {fileID: 446296430}
   collider: {fileID: 1871891756}
   renderer: {fileID: 1871891755}
 --- !u!1001 &1909424580
@@ -6195,16 +6196,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e72617e1623b4d78a6e692711154bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimension: 3
-  On: {fileID: 2100000, guid: 73285bf106f524ad49579758e350c48b, type: 2}
-  Off: {fileID: 2100000, guid: 46eb8323b323546c9973d5419049c9d3, type: 2}
-  Source: {fileID: 1431797837}
-  ClipOn: {fileID: 8300000, guid: b69425ea39c7645c8b36d17063bb36ff, type: 3}
-  ClipOff: {fileID: 8300000, guid: ad236a958d14f4b28a30fc8e076c422c, type: 3}
-  Target: {fileID: 302489516}
+  dimension: 0
+  On: {fileID: 0}
+  Off: {fileID: 0}
+  Source: {fileID: 0}
+  ClipOn: {fileID: 0}
+  ClipOff: {fileID: 0}
+  Target: {fileID: 0}
   Activate: 0
-  Player: {fileID: 772706222}
-  Base: {fileID: 1909424588}
+  Player: {fileID: 0}
+  Base: {fileID: 0}
 --- !u!4 &1913189802 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e29e08e1d210f4d92a5e64bdc164def1, type: 3}
